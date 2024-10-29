@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyter-server-fileid-s3"
+version = "0.0.0"
+authors = [
+  {name = "David Brochart", email = "david.brochart@gmail.com"},
+]
+description = "A Jupyter Server file ID service for S3"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["Jupyter", "S3"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+dependencies = [
+  "jupyter_server_fileid",
+  "boto3",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "moto[s3]",
+]
+
+[project.urls]
+Repository = "https://github.com/davidbrochart/jupyter-server-fileid-s3.git"
